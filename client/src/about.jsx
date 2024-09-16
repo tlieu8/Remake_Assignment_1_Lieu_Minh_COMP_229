@@ -1,9 +1,6 @@
-import BBG from "../src/assets/BBG.jfif";
 import ux from "../src/assets/ux.png";
 import web from "../src/assets/web.png";
 import app from "../src/assets/app.png";
-import hire from "../src/assets/hire.jpg";
-import { Link } from "react-router-dom";
 import "../src/index.css";
 import "../src/about.css";
 export default function About() {
