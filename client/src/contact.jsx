@@ -65,10 +65,13 @@ export default function Contact() {
           </i>
         </Typography>
         <Typography variant="body2" color="textSecondary">
-          facebook: www.xyz.facebook.com
+          facebook: www.mwatugquest.facebook.com
         </Typography>
         <Typography variant="body2" color="textSecondary">
-          email: xyz@yahoo.com
+          email: mwatugquest@yahoo.com
+        </Typography>
+        <Typography variant="body2" color="textSecondary">
+          instagram: @mwatugquest
         </Typography>
       </Box>
     </Container>
