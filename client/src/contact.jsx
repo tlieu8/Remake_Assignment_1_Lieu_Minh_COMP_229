@@ -49,6 +49,17 @@ export default function Contact() {
           />
         </Box>
 
+        <Box sx={{ marginBottom: 2 }}>
+          <TextField
+            fullWidth
+            required
+            id="Contact Number"
+            label="Number"
+            type="number"
+            variant="outlined"
+          />
+        </Box>
+
         {/* Submit Button */}
         <Box sx={{ textAlign: "center", marginTop: 3 }}>
           <Button variant="contained" color="primary" type="submit" size="large">
