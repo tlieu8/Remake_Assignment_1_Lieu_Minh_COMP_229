@@ -1,59 +1,40 @@
 .project-section {
-    padding: 60px 20px;
-    background-color: #f4f4f9;
-    text-align: center;
-  }
-  
-  .worksTitle {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .worksDesc {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 40px;
-  }
-  
-  .worksImgs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0 10px;
-  }
-  
-  .project-card {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .worksImg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .workBtn {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #1976d2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .workBtn:hover {
-    background-color: #115293;
-  }
-  
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Add a subtle background color */
+}
+
+.worksTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Increase font size for better visibility */
+}
+
+.worksDesc {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #666; /* A lighter color for better readability */
+}
+
+.worksImgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align the project cards */
+}
+
+.project-card {
+  margin: 10px;
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.worksImg {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project-card:hover .worksImg {
+  transform: scale(1.05); /* Scale up the image on hover */
+}
