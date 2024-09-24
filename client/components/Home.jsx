@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import "../src/index.css";
 
-export default function About() {
+export default function Home() {
   return (
     <Container maxWidth="lg">
       {/* Intro Section */}
@@ -43,6 +43,17 @@ export default function About() {
           <Typography variant="body1" color="textSecondary" paragraph>
             As a web designer, I specialize in developing visually captivating and user-centric websites, ensuring seamless user experiences through clean and efficient designs.
           </Typography>
+          
+          {/* Mission Statement */}
+          <Box sx={{ marginY: 4 }}>
+            <Typography variant="h6" component="h4" fontWeight="bold" color="primary">
+              My Mission Statement
+            </Typography>
+            <Typography variant="body2" color="textSecondary" paragraph>
+            My mission is to enable companies through the creation of beautiful and useful websites that improve their online image, captivate their audience, and use cutting-edge technology and design to propel them to success.
+            </Typography>
+          </Box>
+
           <Link to="/contact">
             <Button
               variant="contained"
