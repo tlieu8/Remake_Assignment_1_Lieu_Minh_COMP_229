@@ -1,5 +1,3 @@
-import "../src/contact.css";
-
 import React from "react";
 import {
   Container,
@@ -8,6 +6,7 @@ import {
   Button,
   Box,
 } from "@mui/material";
+import "../src/contact.css"; // Ensure you have this file if you're adding styles
 
 export default function Contact() {
   return (
@@ -48,14 +47,38 @@ export default function Contact() {
             variant="outlined"
           />
         </Box>
-
         <Box sx={{ marginBottom: 2 }}>
           <TextField
             fullWidth
             required
-            id="Contact Number"
+            id="ContactNumber"
             label="Number"
             type="number"
+            variant="outlined"
+          />
+        </Box>
+
+        {/* First Message Textarea */}
+        <Box sx={{ marginBottom: 2 }}>
+          <TextField
+            fullWidth
+            required
+            id="message1"
+            label="Your Message"
+            multiline
+            rows={4}
+            variant="outlined"
+          />
+        </Box>
+
+        {/* Second Message Textarea */}
+        <Box sx={{ marginBottom: 2 }}>
+          <TextField
+            fullWidth
+            id="message2"
+            label="Additional Comments"
+            multiline
+            rows={4}
             variant="outlined"
           />
         </Box>
@@ -88,4 +111,3 @@ export default function Contact() {
     </Container>
   );
 }
-
