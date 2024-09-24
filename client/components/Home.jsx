@@ -32,13 +32,13 @@ export default function Home() {
           </Typography>
           <br />
           <Typography variant="h2" component="span" fontWeight="bold">
-            I am <span style={{ color: "#1976d2" }}>Blessing Ajiboye</span>
+            I am <span style={{ color: "#1976d2" }}>Lieu Tuan Truong Minh</span>
           </Typography>
           <Typography variant="h5" component="p" color="textSecondary" gutterBottom>
             Website Designer
           </Typography>
           <Typography variant="body1" color="textSecondary" paragraph>
-            I am a skilled web designer with experience in creating visually appealing, user-friendly websites.
+          As an web designer, I specialize in developing visually captivating and user-centric websites.
           </Typography>
           <Link to="/contact">
             <Button variant="contained" color="primary" size="large" startIcon={<img src={hire} alt="Hire me" width="30" height="30" />}>
