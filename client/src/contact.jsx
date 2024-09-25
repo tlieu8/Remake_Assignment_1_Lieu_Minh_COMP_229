@@ -5,107 +5,126 @@ import {
   TextField,
   Button,
   Box,
+  Grid,
+  Paper,
 } from "@mui/material";
-import "../src/contact.css"; // Ensure you have this file if you're adding styles
+import "../src/contact.css"; // Ensure your CSS file is well-structured
 
 export default function Contact() {
   return (
-    <Container maxWidth="sm" sx={{ paddingY: 4 }}>
-      {/* Page Title */}
-      <Typography variant="h4" component="h1" align="center" gutterBottom>
-        Contact Me
-      </Typography>
+    <Container maxWidth="md" sx={{ paddingY: 6 }}>
+      {/* Form Section */}
+      <Paper elevation={3} sx={{ padding: 4 }}>
+        <Typography variant="h4" component="h1" align="center" gutterBottom>
+          Get in Touch
+        </Typography>
+        
+        {/* Contact Form */}
+        <form noValidate autoComplete="off">
+          <Grid container spacing={2}>
+            {/* First Name */}
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                required
+                label="First Name"
+                variant="outlined"
+                autoFocus
+                aria-label="First Name"
+              />
+            </Grid>
 
-      {/* Contact Form */}
-      <form noValidate autoComplete="off">
-        <Box sx={{ marginBottom: 2 }}>
-          <TextField
-            fullWidth
-            required
-            id="myFName"
-            label="First Name"
-            variant="outlined"
-            autoFocus
-          />
-        </Box>
-        <Box sx={{ marginBottom: 2 }}>
-          <TextField
-            fullWidth
-            required
-            id="myLName"
-            label="Last Name"
-            variant="outlined"
-          />
-        </Box>
-        <Box sx={{ marginBottom: 2 }}>
-          <TextField
-            fullWidth
-            required
-            id="myEmail"
-            label="Email"
-            type="email"
-            variant="outlined"
-          />
-        </Box>
-        <Box sx={{ marginBottom: 2 }}>
-          <TextField
-            fullWidth
-            required
-            id="ContactNumber"
-            label="Number"
-            type="number"
-            variant="outlined"
-          />
-        </Box>
+            {/* Last Name */}
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                required
+                label="Last Name"
+                variant="outlined"
+                aria-label="Last Name"
+              />
+            </Grid>
 
-        {/* First Message Textarea */}
-        <Box sx={{ marginBottom: 2 }}>
-          <TextField
-            fullWidth
-            required
-            id="message1"
-            label="Your Message"
-            multiline
-            rows={4}
-            variant="outlined"
-          />
-        </Box>
+            {/* Email */}
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                required
+                label="Email"
+                type="email"
+                variant="outlined"
+                aria-label="Email Address"
+              />
+            </Grid>
 
-        {/* Second Message Textarea */}
-        <Box sx={{ marginBottom: 2 }}>
-          <TextField
-            fullWidth
-            id="message2"
-            label="Additional Comments"
-            multiline
-            rows={4}
-            variant="outlined"
-          />
-        </Box>
+            {/* Contact Number */}
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                required
+                label="Contact Number"
+                type="tel"
+                variant="outlined"
+                aria-label="Contact Number"
+              />
+            </Grid>
 
-        {/* Submit Button */}
-        <Box sx={{ textAlign: "center", marginTop: 3 }}>
-          <Button variant="contained" color="primary" type="submit" size="large">
-            Submit
-          </Button>
-        </Box>
-      </form>
+            {/* Your Message */}
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                required
+                label="Your Message"
+                multiline
+                rows={4}
+                variant="outlined"
+                aria-label="Your Message"
+              />
+            </Grid>
+
+            {/* Additional Comments */}
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                required
+                label="Additional Comments"
+                multiline
+                rows={4}
+                variant="outlined"
+                aria-label="Additional Comments"
+              />
+            </Grid>
+          </Grid>
+
+          {/* Submit Button */}
+          <Box textAlign="center" mt={3}>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              size="large"
+              aria-label="Submit Form"
+              sx={{ textTransform: "none" }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </form>
+      </Paper>
 
       {/* Additional Contact Info */}
-      <Box mt={4} textAlign="center">
-        <Typography variant="body1">
-          <i>
-            Call me on: <strong>888.555.5555</strong>
-          </i>
+      <Box mt={6} textAlign="center">
+        <Typography variant="body1" gutterBottom>
+          Call me at: <strong>888-555-5555</strong>
+        </Typography>
+        <Typography variant="body2" color="textSecondary" gutterBottom>
+          <strong>Facebook:</strong> www.mwatugquest.facebook.com
+        </Typography>
+        <Typography variant="body2" color="textSecondary" gutterBottom>
+          <strong>Email:</strong> mwatugquest@yahoo.com
         </Typography>
         <Typography variant="body2" color="textSecondary">
-          facebook: www.mwatugquest.facebook.com
-        </Typography>
-        <Typography variant="body2" color="textSecondary">
-          email: mwatugquest@yahoo.com
-        </Typography>
-        <Typography variant="body2" color="textSecondary">
-          instagram: @mwatugquest
+          <strong>Instagram:</strong> @mwatugquest
         </Typography>
       </Box>
     </Container>
