@@ -1,19 +1,23 @@
 import React from "react";
 import { Container, Typography, Card, CardContent, Grid, Box } from "@mui/material";
+import logo from "../src/assets/logo.png"; // Main logo
+import logo1 from "../src/assets/logo1.png"; // Additional logo
 
 export default function Education() {
   const educationData = [
     {
-      school: "Centennial College",
-      degree: "Bachelor of Science in Computer Science",
-      year: "2020 - 2024",
-      description: "Graduated with honors, specializing in software development.",
+      school: "Viet Anh International School",
+      degree: "High School Diploma",
+      year: "2018 - 2022",
+      description: "Focused on mathematics, physics, and computer science.",
+      image: logo1, // Using the additional logo
     },
     {
-      school: "Toronto High School",
-      degree: "High School Diploma",
-      year: "2013 - 2016",
-      description: "Focused on mathematics, physics, and computer science.",
+      school: "Centennial College",
+      degree: "Ontario College Advanced Diploma",
+      year: "2023 - 2026",
+      description: "Graduated with honors, specializing in software development.",
+      image: logo, // Using the main logo
     },
   ];
 
@@ -47,6 +51,16 @@ export default function Education() {
               }}
             >
               <CardContent>
+                {/* Display logo image */}
+                <Box sx={{ textAlign: 'center', marginBottom: 2 }}>
+                  <img
+                    src={edu.image}
+                    alt={`${edu.school} Logo`}
+                    style={{ maxWidth: '100px', height: 'auto' }} // Adjust size as needed
+                  />
+                </Box>
+
+                {/* School Information */}
                 <Box sx={{ marginBottom: 1 }}>
                   <Typography
                     variant="h6"
