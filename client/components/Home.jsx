@@ -70,23 +70,25 @@ export default function Home() {
                 Hire Me
               </Button>
             </Link>
-            <Button
-              variant="outlined"
-              size="large"
-              href="/resume.pdf" // Link to your resume
-              target="_blank" // Open in a new tab
-              sx={{
-                color: "#1976d2", // Custom text color
-                borderColor: "#1976d2", // Custom border color
-                backgroundColor: "transparent", // Transparent background
-                '&:hover': {
-                  backgroundColor: "#1976d2", // Background color on hover
-                  color: "#fff", // Text color on hover
-                },
-              }}
-            >
-              Download My Resume
-            </Button>
+
+            {/* Download Resume Link */}
+            <a href="/Resume.pdf" download>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  color: "#1976d2", // Custom text color
+                  borderColor: "#1976d2", // Custom border color
+                  backgroundColor: "transparent", // Transparent background
+                  '&:hover': {
+                    backgroundColor: "#1976d2", // Background color on hover
+                    color: "#fff", // Text color on hover
+                  },
+                }}
+              >
+                Download Resume
+              </Button>
+            </a>
           </Box>
         </Grid>
 

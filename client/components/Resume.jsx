@@ -44,11 +44,14 @@ export default function Resume() {
               },
               px: 4, // Padding for larger button
             }}
+            
           >
             Download PDF
           </Button>
         </Box>
       </Paper>
     </Container>
+    
   );
 }
+
