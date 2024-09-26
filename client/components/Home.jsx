@@ -25,7 +25,13 @@ export default function Home() {
           <Typography variant="h4" component="h2" color="primary" gutterBottom>
             Hello,
           </Typography>
-          <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
+          <Typography
+            variant="h2"
+            component="h1"
+            fontWeight="bold"
+            gutterBottom
+            sx={{ fontSize: { xs: '1.75rem', md: '2.5rem' } }} // Adjusted font size
+          >
             I am <span style={{ color: "#1976d2" }}>Lieu Tuan Truong Minh</span>
           </Typography>
           <Typography variant="h5" component="h3" color="textSecondary" gutterBottom>
@@ -66,14 +72,16 @@ export default function Home() {
             </Link>
             <Button
               variant="outlined"
-              color="primary"
               size="large"
               href="/resume.pdf" // Link to your resume
               target="_blank" // Open in a new tab
               sx={{
+                color: "#1976d2", // Custom text color
+                borderColor: "#1976d2", // Custom border color
+                backgroundColor: "transparent", // Transparent background
                 '&:hover': {
-                  backgroundColor: "#1976d2",
-                  color: "#fff",
+                  backgroundColor: "#1976d2", // Background color on hover
+                  color: "#fff", // Text color on hover
                 },
               }}
             >
