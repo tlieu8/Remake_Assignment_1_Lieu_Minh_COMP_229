@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; 
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import project1 from "../src/assets/project1.png";
 import project2 from "../src/assets/project2.jpg";
 import project3 from "../src/assets/project3.jpg";
@@ -6,8 +7,48 @@ import project4 from "../src/assets/project4.jpg";
 import project5 from "../src/assets/project5.jpg";
 import project6 from "../src/assets/project6.jpg";
 import { Button, Grid, Card, CardMedia, CardContent, Typography, CardActions } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import "../src/index.css";
 import "../src/project.css";
+
+// Styled Components
+const StyledCard = styled(Card)(({ theme }) => ({
+  position: 'relative',
+  overflow: 'hidden',
+  transition: 'transform 0.3s, box-shadow 0.3s',
+  '&:hover': {
+    transform: 'translateY(-5px)',
+    boxShadow: theme.shadows[10],
+  },
+}));
+
+const ZoomImage = styled(CardMedia)(({ theme }) => ({
+  transition: 'transform 0.3s ease',
+  '&:hover': {
+    transform: 'scale(1.1)',
+  },
+}));
+
+const ProjectTitle = styled(Typography)(({ theme }) => ({
+  fontWeight: 600,
+  color: theme.palette.primary.main,
+  textAlign: 'center',
+  margin: '20px 0',
+}));
+
+const ProjectDescription = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.secondary,
+  textAlign: 'center',
+}));
+
+const ViewMoreButton = styled(Button)(({ theme }) => ({
+  marginTop: '40px',
+  backgroundColor: theme.palette.primary.main,
+  color: '#fff',
+  '&:hover': {
+    backgroundColor: theme.palette.primary.dark,
+  },
+}));
 
 export default function Project() {
   const projects = [
@@ -20,65 +61,54 @@ export default function Project() {
   ];
 
   return (
-    <section id="works" className="project-section">
+    <section id="works" className="project-section" style={{ padding: '60px 20px', backgroundColor: '#f5f5f5' }}>
       {/* Title Section */}
-      <Typography variant="h3" align="center" gutterBottom className="worksTitle">
+      <ProjectTitle variant="h3" gutterBottom>
         My Projects
-      </Typography>
-      <Typography variant="body1" align="center" className="worksDesc" paragraph>
+      </ProjectTitle>
+      <Typography variant="body1" align="center" paragraph style={{ color: '#555', maxWidth: '600px', margin: '0 auto' }}>
         I pay close attention to every detail, ensuring precision and quality in every project. Below are a few key projects that showcase my skills in IT development, design, and architecture.
       </Typography>
 
       {/* Project Grid */}
-      <Grid container spacing={4} className="worksGrid" justifyContent="center">
+      <Grid container spacing={4} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card className="project-card" elevation={4} sx={{ maxHeight: 400, display: 'flex', flexDirection: 'column' }}>
-              {/* Project Image */}
-              <CardMedia
+            <StyledCard elevation={4}>
+              {/* Project Image with Zoom Effect */}
+              <ZoomImage
                 component="img"
-                height="200"
+                height="150"
                 image={project.src}
                 alt={project.title}
-                className="worksImg"
               />
               
               {/* Project Content */}
-              <CardContent sx={{ flexGrow: 1 }}>
+              <CardContent>
                 <Typography variant="h6" component="div" gutterBottom>
                   {project.title}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <ProjectDescription variant="body2">
                   {project.description}
-                </Typography>
+                </ProjectDescription>
               </CardContent>
 
               {/* Card Actions */}
-              <CardActions>
-                <Button size="small" color="primary">
+              <CardActions sx={{ justifyContent: 'center' }}>
+                <Button size="small" color="primary" variant="outlined">
                   Learn More
                 </Button>
               </CardActions>
-            </Card>
+            </StyledCard>
           </Grid>
         ))}
       </Grid>
 
-      {/* View More Projects Button */}
-      <div style={{ textAlign: "center", marginTop: 40 }}>
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          sx={{
-            '&:hover': {
-              backgroundColor: "#115293",
-            },
-            textTransform: 'none', // Prevents capitalization
-          }}
-        >
-          View More Projects
-        </Button>
+      {/* Link to Contact Page */}
+      <div className="contact-link" style={{ marginTop: '20px', textAlign: 'center' }}>
+        <Link to="/contact" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
+          Contact Me
+        </Link>
       </div>
     </section>
   );

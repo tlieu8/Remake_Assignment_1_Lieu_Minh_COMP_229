@@ -9,7 +9,23 @@ import {
   Grid,
   Paper,
 } from "@mui/material";
+import { styled } from '@mui/material/styles'; // For custom styling
 import "../src/contact.css"; // Ensure your CSS file is well-structured
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(4),
+  borderRadius: theme.shape.borderRadius,
+  boxShadow: theme.shadows[5],
+}));
+
+const SubmitButton = styled(Button)(({ theme }) => ({
+  marginTop: theme.spacing(2),
+  backgroundColor: theme.palette.primary.main,
+  color: '#fff',
+  '&:hover': {
+    backgroundColor: theme.palette.primary.dark,
+  },
+}));
 
 export default function Contact() {
   const navigate = useNavigate(); // Initialize navigation
@@ -21,7 +37,6 @@ export default function Contact() {
     email: "",
     contactNumber: "",
     message: "",
-    comments: "",
   });
 
   // Error state
@@ -73,11 +88,11 @@ export default function Contact() {
   return (
     <Container maxWidth="md" sx={{ paddingY: 6 }}>
       {/* Form Section */}
-      <Paper elevation={3} sx={{ padding: 4 }}>
+      <StyledPaper elevation={3}>
         <Typography variant="h4" component="h1" align="center" gutterBottom>
           Get in Touch
         </Typography>
-        
+
         {/* Contact Form */}
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
           <Grid container spacing={2}>
@@ -91,7 +106,7 @@ export default function Contact() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                error={errors.firstName} // Show error if validation fails
+                error={errors.firstName}
                 helperText={errors.firstName ? "First Name is required" : ""}
                 autoFocus
                 aria-label="First Name"
@@ -108,7 +123,7 @@ export default function Contact() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                error={errors.lastName} // Show error if validation fails
+                error={errors.lastName}
                 helperText={errors.lastName ? "Last Name is required" : ""}
                 aria-label="Last Name"
               />
@@ -125,7 +140,7 @@ export default function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                error={errors.email} // Show error if validation fails
+                error={errors.email}
                 helperText={errors.email ? "Email is required" : ""}
                 aria-label="Email Address"
               />
@@ -142,7 +157,7 @@ export default function Contact() {
                 name="contactNumber"
                 value={formData.contactNumber}
                 onChange={handleChange}
-                error={errors.contactNumber} // Show error if validation fails
+                error={errors.contactNumber}
                 helperText={errors.contactNumber ? "Contact Number is required" : ""}
                 aria-label="Contact Number"
               />
@@ -160,7 +175,7 @@ export default function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                error={errors.message} // Show error if validation fails
+                error={errors.message}
                 helperText={errors.message ? "Message is required" : ""}
                 aria-label="Your Message"
               />
@@ -168,20 +183,19 @@ export default function Contact() {
           </Grid>
 
           {/* Submit Button */}
-          <Box textAlign="center" mt={3}>
-            <Button
+          <Box textAlign="center">
+            <SubmitButton
               variant="contained"
-              color="primary"
               type="submit"
               size="large"
               aria-label="Submit Form"
               sx={{ textTransform: "none" }}
             >
               Submit
-            </Button>
+            </SubmitButton>
           </Box>
         </form>
-      </Paper>
+      </StyledPaper>
 
       {/* Additional Contact Info */}
       <Box mt={6} textAlign="center">
@@ -189,7 +203,7 @@ export default function Contact() {
           Call me at: <strong>888-555-5555</strong>
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>
-          <strong>Facebook:</strong> www.mwatugquest.facebook.com
+          <strong>Facebook:</strong> www.facebook.com/mwatugquest
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>
           <strong>Email:</strong> mwatugquest@yahoo.com

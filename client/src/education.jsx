@@ -93,9 +93,9 @@ export default function Education() {
       </Grid>
 
       {/* Link to Contact Page */}
-      <div className="contact-link" style={{ marginTop: '20px', textAlign: 'center' }}>
-        <Link to="/contact" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
-          Contact Me
+      <div className="project-link" style={{ marginTop: '20px', textAlign: 'center' }}>
+        <Link to="/project" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
+          My Projects
         </Link>
       </div>
     </Container>
