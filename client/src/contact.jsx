@@ -24,6 +24,15 @@ export default function Contact() {
     comments: "",
   });
 
+  // Error state
+  const [errors, setErrors] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    contactNumber: false,
+    message: false,
+  });
+
   // Handle input changes
   const handleChange = (e) => {
     setFormData({
@@ -32,15 +41,33 @@ export default function Contact() {
     });
   };
 
+  // Validate fields
+  const validateFields = () => {
+    const newErrors = {
+      firstName: formData.firstName === "",
+      lastName: formData.lastName === "",
+      email: formData.email === "",
+      contactNumber: formData.contactNumber === "",
+      message: formData.message === "",
+    };
+
+    setErrors(newErrors);
+
+    // If any field is empty, return false
+    return !Object.values(newErrors).includes(true);
+  };
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent the default form submit behavior
 
-    // Do something with the form data (e.g., send to server)
-    console.log("Form data submitted:", formData);
+    // If validation passes, proceed
+    if (validateFields()) {
+      console.log("Form data submitted:", formData);
 
-    // Redirect to Home page after submission
-    navigate("/");
+      // Redirect to Home page after submission
+      navigate("/");
+    }
   };
 
   return (
@@ -64,6 +91,8 @@ export default function Contact() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
+                error={errors.firstName} // Show error if validation fails
+                helperText={errors.firstName ? "First Name is required" : ""}
                 autoFocus
                 aria-label="First Name"
               />
@@ -79,6 +108,8 @@ export default function Contact() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
+                error={errors.lastName} // Show error if validation fails
+                helperText={errors.lastName ? "Last Name is required" : ""}
                 aria-label="Last Name"
               />
             </Grid>
@@ -94,6 +125,8 @@ export default function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                error={errors.email} // Show error if validation fails
+                helperText={errors.email ? "Email is required" : ""}
                 aria-label="Email Address"
               />
             </Grid>
@@ -109,6 +142,8 @@ export default function Contact() {
                 name="contactNumber"
                 value={formData.contactNumber}
                 onChange={handleChange}
+                error={errors.contactNumber} // Show error if validation fails
+                helperText={errors.contactNumber ? "Contact Number is required" : ""}
                 aria-label="Contact Number"
               />
             </Grid>
@@ -125,23 +160,9 @@ export default function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                error={errors.message} // Show error if validation fails
+                helperText={errors.message ? "Message is required" : ""}
                 aria-label="Your Message"
-              />
-            </Grid>
-
-            {/* Additional Comments */}
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                required
-                label="Additional Comments"
-                multiline
-                rows={4}
-                variant="outlined"
-                name="comments"
-                value={formData.comments}
-                onChange={handleChange}
-                aria-label="Additional Comments"
               />
             </Grid>
           </Grid>
@@ -176,19 +197,6 @@ export default function Contact() {
         <Typography variant="body2" color="textSecondary">
           <strong>Instagram:</strong> @mwatugquest
         </Typography>
-      </Box>
-
-      {/* Button to navigate back to the Home page */}
-      <Box textAlign="center" mt={3}>
-        <Button
-          variant="outlined"
-          color="secondary"
-          size="large"
-          onClick={() => navigate('/')} // Redirect to Home page
-          aria-label="Go to Home Page"
-        >
-          Go to Home
-        </Button>
       </Box>
     </Container>
   );
