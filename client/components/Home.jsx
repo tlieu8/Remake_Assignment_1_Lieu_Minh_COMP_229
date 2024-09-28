@@ -71,7 +71,7 @@ export default function Home() {
               </Button>
             </Link>
             {/* Download Resume Link */}
-            <a href="/Resume (1).pdf" download="Lieu_Tuan_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Resume (1).pdf" download="Lieu_Tuan_Truong_Minh_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outlined"
                 size="large"
