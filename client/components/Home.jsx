@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button, Avatar, Box } from "@mui/material";
 import BBG from "../src/assets/BBG.jfif"; // Profile image
 import hire from "../src/assets/hire.jpg"; // Hire me icon
+import myPicture from "../src/assets/myPicture.jpg"; // Your picture (replace with actual file)
 import "../src/index.css"; // Custom styles
 
 export default function Home() {
@@ -91,6 +92,25 @@ export default function Home() {
               </a>
             </div>
           </Box>
+
+          {/* Navigation Links */}
+          <Box sx={{ marginTop: 4 }}>
+            <Link to="/about" style={{ textDecoration: 'none' }}>
+              <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
+                About Me
+              </Button>
+            </Link>
+            <Link to="/education" style={{ textDecoration: 'none' }}>
+              <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
+                Education
+              </Button>
+            </Link>
+            <Link to="/contact" style={{ textDecoration: 'none' }}>
+              <Button variant="contained" color="primary">
+                Contact Me
+              </Button>
+            </Link>
+          </Box>
         </Grid>
 
         {/* Profile Image */}
@@ -105,8 +125,8 @@ export default function Home() {
           }}
         >
           <Avatar
-            src={BBG} // Profile image
-            alt="Profile of Lieu Tuan Truong Minh"
+            src={myPicture} // Your picture
+            alt="Your Name" // Replace with your name
             sx={{
               width: 250,
               height: 250,

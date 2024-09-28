@@ -92,8 +92,8 @@ export default function Education() {
         ))}
       </Grid>
 
-      {/* Link to Contact Page with additional margin */}
-      <div className="contact-link" style={{ marginTop: '40px', textAlign: 'center' }}>
+      {/* Link to Contact Page */}
+      <div className="contact-link" style={{ marginTop: '20px', textAlign: 'center' }}>
         <Link to="/contact" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
           Contact Me
         </Link>
