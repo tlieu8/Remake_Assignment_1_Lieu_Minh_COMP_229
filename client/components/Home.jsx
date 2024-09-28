@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button, Avatar, Box } from "@mui/material";
-import BBG from "../src/assets/BBG.jfif"; // Profile image
-import hire from "../src/assets/hire.jpg"; // Hire me icon
 import myPicture from "../src/assets/myPicture.jpg"; // Your picture (replace with actual file)
+import hire from "../src/assets/hire.jpg"; // Hire me icon
 import "../src/index.css"; // Custom styles
 
 export default function Home() {
   return (
-    <Container maxWidth="lg" sx={{ paddingY: 8 }}>
+    <Container maxWidth="lg" sx={{ py: 8 }}>
       {/* Intro Section */}
       <Grid
         container
@@ -31,7 +30,7 @@ export default function Home() {
             component="h1"
             fontWeight="bold"
             gutterBottom
-            sx={{ fontSize: { xs: '1.75rem', md: '2.5rem' } }} // Adjusted font size
+            sx={{ fontSize: { xs: '1.75rem', md: '2.5rem' } }}
           >
             I am <span style={{ color: "#1976d2" }}>Lieu Tuan Truong Minh</span>
           </Typography>
@@ -72,25 +71,23 @@ export default function Home() {
               </Button>
             </Link>
             {/* Download Resume Link */}
-            <div className="header__buttons">
-              <a href="/Resume.pdf" download target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outlined"
-                  size="large"
-                  sx={{
-                    color: "#1976d2", // Custom text color
-                    borderColor: "#1976d2", // Custom border color
-                    backgroundColor: "transparent", // Transparent background
-                    '&:hover': {
-                      backgroundColor: "#1976d2", // Background color on hover
-                      color: "#fff", // Text color on hover
-                    },
-                  }}
-                >
-                  Download Resume
-                </Button>
-              </a>
-            </div>
+            <a href="/Resume (1).pdf" download="Lieu_Tuan_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  color: "#1976d2",
+                  borderColor: "#1976d2",
+                  backgroundColor: "transparent",
+                  '&:hover': {
+                    backgroundColor: "#1976d2",
+                    color: "#fff",
+                  },
+                }}
+              >
+                Download Resume
+              </Button>
+            </a>
           </Box>
 
           {/* Navigation Links */}
@@ -103,11 +100,6 @@ export default function Home() {
             <Link to="/education" style={{ textDecoration: 'none' }}>
               <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
                 Education
-              </Button>
-            </Link>
-            <Link to="/contact" style={{ textDecoration: 'none' }}>
-              <Button variant="contained" color="primary">
-                Contact Me
               </Button>
             </Link>
           </Box>
@@ -125,14 +117,14 @@ export default function Home() {
           }}
         >
           <Avatar
-            src={myPicture} // Your picture
-            alt="Your Name" // Replace with your name
+            src={myPicture}
+            alt="Your Name"
             sx={{
               width: 250,
               height: 250,
               boxShadow: 4,
               borderRadius: "50%",
-              border: "5px solid #1976d2", // Adding a border for a polished look
+              border: "5px solid #1976d2",
             }}
           />
         </Grid>

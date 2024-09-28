@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Paper, Typography, Button, Box } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download"; // Import the download icon from MUI
-import resumePDF from "../src/assets/resume.pdf";
+import resumePDF from "../src/assets/Resume (1).pdf";
 
 export default function Resume() {
   return (
@@ -24,7 +24,7 @@ export default function Resume() {
           align="center"
           sx={{ mb: 5, color: "#616161", maxWidth: "700px", mx: "auto" }}
         >
-          Below you can download my full resume, which highlights my experiences, education, and key skills. Feel free to contact me if you'd like more details or references.
+    
         </Typography>
 
         {/* Download PDF Button */}
@@ -54,4 +54,5 @@ export default function Resume() {
     
   );
 }
+
 
