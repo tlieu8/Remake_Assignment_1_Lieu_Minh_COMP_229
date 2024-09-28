@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Typography, Card, CardContent, Grid, Box } from "@mui/material";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import logo from "../src/assets/logo.png"; // Main logo
 import logo1 from "../src/assets/logo1.png"; // Additional logo
 
@@ -90,6 +91,13 @@ export default function Education() {
           </Grid>
         ))}
       </Grid>
+
+      {/* Link to Contact Page with additional margin */}
+      <div className="contact-link" style={{ marginTop: '40px', textAlign: 'center' }}>
+        <Link to="/contact" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
+          Contact Me
+        </Link>
+      </div>
     </Container>
   );
 }
