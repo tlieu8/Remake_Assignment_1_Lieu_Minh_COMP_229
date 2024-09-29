@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useNavigate } from "react-router-dom"; 
 import {
   Container,
   Typography,
@@ -9,8 +9,8 @@ import {
   Grid,
   Paper,
 } from "@mui/material";
-import { styled } from '@mui/material/styles'; // For custom styling
-import "../src/contact.css"; // Ensure your CSS file is well-structured
+import { styled } from '@mui/material/styles';
+import "../src/contact.css"; 
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(4),
@@ -28,9 +28,8 @@ const SubmitButton = styled(Button)(({ theme }) => ({
 }));
 
 export default function Contact() {
-  const navigate = useNavigate(); // Initialize navigation
+  const navigate = useNavigate(); 
 
-  // States for capturing form data
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -39,7 +38,7 @@ export default function Contact() {
     message: "",
   });
 
-  // Error state
+ 
   const [errors, setErrors] = useState({
     firstName: false,
     lastName: false,
@@ -48,7 +47,7 @@ export default function Contact() {
     message: false,
   });
 
-  // Handle input changes
+ 
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -56,7 +55,7 @@ export default function Contact() {
     });
   };
 
-  // Validate fields
+
   const validateFields = () => {
     const newErrors = {
       firstName: formData.firstName === "",
@@ -68,32 +67,31 @@ export default function Contact() {
 
     setErrors(newErrors);
 
-    // If any field is empty, return false
+
     return !Object.values(newErrors).includes(true);
   };
 
-  // Handle form submission
+ 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submit behavior
+    e.preventDefault(); 
 
-    // If validation passes, proceed
+
     if (validateFields()) {
       console.log("Form data submitted:", formData);
 
-      // Redirect to Home page after submission
+
       navigate("/");
     }
   };
 
   return (
     <Container maxWidth="md" sx={{ paddingY: 6 }}>
-      {/* Form Section */}
+ 
       <StyledPaper elevation={3}>
         <Typography variant="h4" component="h1" align="center" gutterBottom>
           Get in Touch
         </Typography>
 
-        {/* Contact Form */}
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             {/* First Name */}
@@ -113,7 +111,7 @@ export default function Contact() {
               />
             </Grid>
 
-            {/* Last Name */}
+     
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
@@ -129,7 +127,7 @@ export default function Contact() {
               />
             </Grid>
 
-            {/* Email */}
+ 
             <Grid item xs={12}>
               <TextField
                 fullWidth
@@ -146,7 +144,7 @@ export default function Contact() {
               />
             </Grid>
 
-            {/* Contact Number */}
+       
             <Grid item xs={12}>
               <TextField
                 fullWidth
@@ -163,7 +161,6 @@ export default function Contact() {
               />
             </Grid>
 
-            {/* Your Message */}
             <Grid item xs={12}>
               <TextField
                 fullWidth
@@ -182,7 +179,6 @@ export default function Contact() {
             </Grid>
           </Grid>
 
-          {/* Submit Button */}
           <Box textAlign="center">
             <SubmitButton
               variant="contained"
@@ -197,7 +193,6 @@ export default function Contact() {
         </form>
       </StyledPaper>
 
-      {/* Additional Contact Info */}
       <Box mt={6} textAlign="center">
         <Typography variant="body1" gutterBottom>
           Call me at: <strong>888-555-5555</strong>

@@ -1,40 +1,40 @@
 .project-section {
   padding: 40px 20px;
-  background-color: #f9f9f9; /* Add a subtle background color */
+  background-color: #f9f9f9; 
 }
 
 .worksTitle {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 2.5rem; /* Increase font size for better visibility */
+  font-size: 2.5rem;
 }
 
 .worksDesc {
   text-align: center;
   margin-bottom: 30px;
   font-size: 1.2rem;
-  color: #666; /* A lighter color for better readability */
+  color: #666; 
 }
 
 .worksImgs {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center align the project cards */
+  justify-content: center;
 }
 
 .project-card {
   margin: 10px;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .worksImg {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  transition: transform 0.3s ease; 
 }
 
 .project-card:hover .worksImg {
-  transform: scale(1.05); /* Scale up the image on hover */
+  transform: scale(1.05); 
 }

@@ -16,10 +16,10 @@ export default function Layout() {
   const theme = useTheme();
   return (
     <>
-      {/* AppBar for Navigation */}
+
       <AppBar position="static" color="primary">
         <Toolbar>
-          {/* Logo or Icon */}
+      
           <IconButton edge="start" color="inherit" aria-label="logo" sx={{ mr: 2 }}>
             <img
               src={football1}
@@ -30,12 +30,10 @@ export default function Layout() {
             />
           </IconButton>
 
-          {/* Title */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: theme.palette.common.white }}>
             My Portfolio
           </Typography>
 
-          {/* Navigation Links */}
           <Box sx={{ display: 'flex', gap: theme.spacing(2) }}>
           <Button color="inherit" component={RouterLink} to="/" sx={{ '&:hover': { bgcolor: theme.palette.secondary.main } }}>
               Home
@@ -56,7 +54,6 @@ export default function Layout() {
         </Toolbar>
       </AppBar>
 
-      {/* Content Divider */}
       <Box my={2}>
       <Divider sx={{ bgcolor: theme.palette.divider, height: '2px' }} />
       </Box>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom"; 
 import ux from "../src/assets/ux.png";
 import web from "../src/assets/web.png";
 import app from "../src/assets/app.png";
@@ -53,7 +53,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Link to Education Page */}
+  
         <div className="education-link" style={{ marginTop: '20px', textAlign: 'center' }}>
           <Link to="/education" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
             View My Education

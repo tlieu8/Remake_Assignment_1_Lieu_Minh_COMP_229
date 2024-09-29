@@ -1,5 +1,5 @@
 import React from "react"; 
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom"; 
 import project1 from "../src/assets/project1.png";
 import project2 from "../src/assets/project2.jpg";
 import project3 from "../src/assets/project3.jpg";
@@ -11,7 +11,7 @@ import { styled } from '@mui/material/styles';
 import "../src/index.css";
 import "../src/project.css";
 
-// Styled Components
+
 const StyledCard = styled(Card)(({ theme }) => ({
   position: 'relative',
   overflow: 'hidden',
@@ -62,7 +62,7 @@ export default function Project() {
 
   return (
     <section id="works" className="project-section" style={{ padding: '60px 20px', backgroundColor: '#f5f5f5' }}>
-      {/* Title Section */}
+   
       <ProjectTitle variant="h3" gutterBottom>
         My Projects
       </ProjectTitle>
@@ -70,12 +70,12 @@ export default function Project() {
         I pay close attention to every detail, ensuring precision and quality in every project. Below are a few key projects that showcase my skills in IT development, design, and architecture.
       </Typography>
 
-      {/* Project Grid */}
+      
       <Grid container spacing={4} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <StyledCard elevation={4}>
-              {/* Project Image with Zoom Effect */}
+         
               <ZoomImage
                 component="img"
                 height="150"
@@ -83,7 +83,7 @@ export default function Project() {
                 alt={project.title}
               />
               
-              {/* Project Content */}
+   
               <CardContent>
                 <Typography variant="h6" component="div" gutterBottom>
                   {project.title}
@@ -93,7 +93,7 @@ export default function Project() {
                 </ProjectDescription>
               </CardContent>
 
-              {/* Card Actions */}
+        
               <CardActions sx={{ justifyContent: 'center' }}>
                 <Button size="small" color="primary" variant="outlined">
                   Learn More
@@ -104,7 +104,7 @@ export default function Project() {
         ))}
       </Grid>
 
-      {/* Link to Contact Page */}
+     
       <div className="contact-link" style={{ marginTop: '20px', textAlign: 'center' }}>
         <Link to="/contact" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
           Contact Me

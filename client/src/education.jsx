@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Typography, Card, CardContent, Grid, Box } from "@mui/material";
-import { Link } from "react-router-dom"; // Import Link for navigation
-import logo from "../src/assets/logo.png"; // Main logo
-import logo1 from "../src/assets/logo1.png"; // Additional logo
+import { Link } from "react-router-dom"; 
+import logo from "../src/assets/logo.png";
+import logo1 from "../src/assets/logo1.png"; 
 
 export default function Education() {
   const educationData = [
@@ -11,20 +11,20 @@ export default function Education() {
       degree: "High School Diploma",
       year: "2018 - 2022",
       description: "Focused on mathematics, physics, and computer science.",
-      image: logo1, // Using the additional logo
+      image: logo1, 
     },
     {
       school: "Centennial College",
       degree: "Ontario College Advanced Diploma",
       year: "2023 - 2026",
       description: "Graduated with honors, specializing in software development.",
-      image: logo, // Using the main logo
+      image: logo, 
     },
   ];
 
   return (
     <Container maxWidth="md" sx={{ paddingY: 6 }}>
-      {/* Title */}
+
       <Typography
         variant="h4"
         component="h1"
@@ -35,7 +35,7 @@ export default function Education() {
         Education
       </Typography>
 
-      {/* Education Cards */}
+ 
       <Grid container spacing={3}>
         {educationData.map((edu, index) => (
           <Grid item xs={12} sm={6} key={index}>
@@ -52,7 +52,7 @@ export default function Education() {
               }}
             >
               <CardContent>
-                {/* Display logo image */}
+              
                 <Box sx={{ textAlign: 'center', marginBottom: 2 }}>
                   <img
                     src={edu.image}
@@ -61,7 +61,7 @@ export default function Education() {
                   />
                 </Box>
 
-                {/* School Information */}
+       
                 <Box sx={{ marginBottom: 1 }}>
                   <Typography
                     variant="h6"
@@ -92,7 +92,7 @@ export default function Education() {
         ))}
       </Grid>
 
-      {/* Link to Contact Page */}
+  
       <div className="project-link" style={{ marginTop: '20px', textAlign: 'center' }}>
         <Link to="/project" style={{ textDecoration: 'none', color: '#1565c0', fontWeight: 'bold' }}>
           My Projects

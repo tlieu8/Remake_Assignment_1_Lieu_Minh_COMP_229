@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button, Avatar, Box } from "@mui/material";
-import myPicture from "../src/assets/myPicture.jpg"; // Your picture (replace with actual file)
-import hire from "../src/assets/hire.jpg"; // Hire me icon
-import "../src/index.css"; // Custom styles
+import myPicture from "../src/assets/myPicture.jpg"; 
+import hire from "../src/assets/hire.jpg"; 
+import "../src/index.css";
 
 export default function Home() {
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
-      {/* Intro Section */}
+
       <Grid
         container
         spacing={4}
@@ -20,7 +20,7 @@ export default function Home() {
           padding: { xs: 2, md: 4 },
         }}
       >
-        {/* Left Content */}
+   
         <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <Typography variant="h4" component="h2" color="primary" gutterBottom>
             Hello,
@@ -42,7 +42,7 @@ export default function Home() {
             through clean and efficient designs. My goal is to help businesses establish a strong online presence.
           </Typography>
 
-          {/* Mission Statement */}
+        
           <Box sx={{ marginY: 4 }}>
             <Typography variant="h6" component="h4" fontWeight="bold" color="primary">
               My Mission
@@ -53,7 +53,7 @@ export default function Home() {
             </Typography>
           </Box>
 
-          {/* Action Buttons */}
+       
           <Box sx={{ display: "flex", gap: 2 }}>
             <Link to="/contact">
               <Button
@@ -70,7 +70,7 @@ export default function Home() {
                 Hire Me
               </Button>
             </Link>
-            {/* Download Resume Link */}
+       
             <a href="/Resume (1).pdf" download="Lieu_Tuan_Truong_Minh_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outlined"
@@ -90,7 +90,7 @@ export default function Home() {
             </a>
           </Box>
 
-          {/* Navigation Links */}
+      
           <Box sx={{ marginTop: 4 }}>
             <Link to="/about" style={{ textDecoration: 'none' }}>
               <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
