@@ -67,7 +67,7 @@ export default function Project() {
         My Projects
       </ProjectTitle>
       <Typography variant="body1" align="center" paragraph style={{ color: '#555', maxWidth: '600px', margin: '0 auto' }}>
-        I pay close attention to every detail, ensuring precision and quality in every project. Below are a few key projects that showcase my skills in IT development, design, and architecture.
+      I meticulously attend to every detail, ensuring precision and quality in every project. Below are a few key projects that showcase my skills in IT development, design, and architecture.
       </Typography>
 
       
