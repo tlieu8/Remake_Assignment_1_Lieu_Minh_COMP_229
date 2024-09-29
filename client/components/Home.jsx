@@ -105,7 +105,6 @@ export default function Home() {
           </Box>
         </Grid>
 
-        {/* Profile Image */}
         <Grid
           item
           xs={12}
