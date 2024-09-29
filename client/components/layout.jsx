@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import football1 from "../src/assets/football1.jfif";
+import football1 from "../src/assets/header.jpg";
 import {
   AppBar,
   Toolbar,
